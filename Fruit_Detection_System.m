@@ -299,7 +299,7 @@ elseif(a<=185 && b<=255 && c<=170 )
     set(handles.colordet, 'Background', [0.0 0.957 0.239]);
     set(handles.colordet, 'Foreground', 'white');
     output = 2;
-     cp=1;
+    cp=1;
 elseif(a>=235 && b<=160 && b>120 && c<80 && c>20 )
     ClPass=ClPass + 1;
     set(handles.colorquality,'String', num2str(ClPass));
@@ -310,14 +310,14 @@ elseif(a>=235 && b<=160 && b>120 && c<80 && c>20 )
     set(handles.colordet, 'Background', [1.0 0.698 0.027]);
     set(handles.colordet, 'Foreground', 'white');
     output = 1;
-     cp=1;
+    cp=1;
 else  
     ClFail=ClFail + 1;
     set(handles.colorfail,'String', num2str(ClFail));
     set(handles.colordet,'string','Not Detect');
     set(handles.colordet, 'Background', [1.0 0.0 0.0]);
     set(handles.colordet, 'Foreground', 'white');
-      cp=0; 
+    cp=0; 
     
 end   
 end
@@ -325,7 +325,7 @@ end
 %===================Praveen's CODE========================= 
 
 function pushbutton4_Callback(hObject, eventdata, handles)
-global output;
+global output;  %call the result of color detect part
 global TPass;
 global TFail;
 global sff;
@@ -341,9 +341,6 @@ if sff ~=0
     
 x = handles.x1;%get the input image
 gray_x = rgb2gray(x);   %convert image to grayscale
-
-%output = pushbutton3_Callback(hObject, eventdata, handles); %call the result of color detect part
-
 red = x( : , : , 1);%extract red plane
 green = x( : , : , 2);%extract green plane
 
@@ -486,12 +483,12 @@ else
         
     elseif Rounded_Area >= 13000
         SiPass=SiPass+ 1;
-        set(handles.sizequality, 'String',  num2str(SiPass));;
+        set(handles.sizequality, 'String',  num2str(SiPass));
         set(handles.sizequality, 'Background', [0.0 0.957 0.239]);
         set(handles.sizequality, 'Foreground', 'white');
         
     elseif Rounded_Area >= 9500
-        SiPass=SiPass+ 1
+        SiPass=SiPass+ 1;
         set(handles.sizequality, 'String',  num2str(SiPass));
         set(handles.sizequality, 'Background', [0.0 0.957 0.239]);
         set(handles.sizequality, 'Foreground', 'white');
