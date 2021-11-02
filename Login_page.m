@@ -53,6 +53,7 @@ function Login_page_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to Login_page (see VARARGIN)
 
 % Choose default command line output for Login_page
+movegui(gcf,'center');
 handles.output = hObject;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -20,9 +20,6 @@ end
 
 % End initialization code - DO NOT EDIT
 
-
-
-
 % --- Executes just before Fruit_Detection_System is made visible.
 function Fruit_Detection_System_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
@@ -30,6 +27,8 @@ function Fruit_Detection_System_OpeningFcn(hObject, eventdata, handles, varargin
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to Fruit_Detection_System (see VARARGIN)
+
+movegui(gcf,'center');
 axes(handles.axes3);
 imshow('new_BG_Image.jpg');
    
