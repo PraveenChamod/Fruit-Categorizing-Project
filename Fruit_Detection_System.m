@@ -189,19 +189,18 @@ MASKED_IMAGE = imerode(GRAY_SCALE_IMAGE,DISK_MASK);%add mask
 BLACK_AND_WHITE = MASKED_IMAGE < 85;              %convert gray scale image to black and white image
 %
 imshow(y);
-pause(0.5);
+pause(0.37);
 %
 imshow(GRAY_SCALE_IMAGE);
-pause(0.5);
+pause(0.37);
 %
 imshow(MASKED_IMAGE);
-pause(0.5);
+pause(0.37);
 %
 imshow(BLACK_AND_WHITE);
-pause(0.5);
+pause(0.37);
 %
 imshow(y);
-pause(0.5);
 title('Surface Detected!');
 
 [a b] = bwlabel(BLACK_AND_WHITE);                   %count number of objects
@@ -217,7 +216,7 @@ else
     set(handles.status_quality, 'Background', [1.0 0.0 0.0]);
     set(handles.status_quality, 'Foreground', 'white'); 
    % msgbox('Damaged Fruit Detected! ')
-    pause(0.2);
+    %pause(0.3);
     %closereq();
 
 
@@ -370,11 +369,12 @@ BW1 = edge(BW_filled,'Canny');%This 'Canny' method uses two thresholds to detect
 %=====================Plot Images========================
 
 axes(handles.axes7);%This axes use to plot the outputs
-imshow(gray_x); pause(0.5);
-imshow(object); pause(0.5);
-imshow(clean_img); pause(0.2);
-imshow(BW_filled); pause(0.2);
-imshow(BW1); pause(0.2);
+imshow(x); pause(0.37);
+imshow(gray_x); pause(0.37);
+imshow(object); pause(0.37);
+imshow(clean_img); pause(0.37);
+%imshow(BW_filled); pause(0.37);
+
 
 if (object == red)
     imshow(BW1); title('Size Detected!');
