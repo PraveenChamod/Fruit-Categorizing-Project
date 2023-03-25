@@ -15,3 +15,5 @@ All the implementation details and process workflow of the project can be viewed
 
 ## Project Development
 In this pandemic situation due to lack of manpower, companies have faced many difficulties such as the affecting economy and fulfilling customer needs on time. As a result, most companies are moving forward with modern technology. They pay much attention to using more technical items to do their entire process. It gives more advantages compared with using manpower. With this situation, we hope our automated application will give a lot of comfort to their productivity in different ways. As well, we assume this application can be developed with various paths and various technologies for many fields.
+
+![MATLAB Project](https://user-images.githubusercontent.com/86168078/227686769-eed733bd-6157-4723-98e7-f097cb124e58.png)
